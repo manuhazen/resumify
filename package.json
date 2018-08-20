@@ -8,8 +8,10 @@
     "react-dom": "^16.4.2",
     "react-notify-toast": "^0.5.0",
     "react-redux": "^5.0.7",
+    "react-redux-loading-bar": "^4.0.5",
     "react-scripts": "1.1.4",
     "redux": "^4.0.0",
+    "redux-devtools-extension": "^2.13.5",
     "redux-persist": "^5.10.0",
     "sortablejs": "^1.7.0"
   },
@@ -18,5 +20,11 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "enzyme": "^3.4.4",
+    "enzyme-adapter-react-16": "^1.2.0",
+    "react-test-renderer": "^16.4.2",
+    "redux-logger": "^3.0.6"
   }
 }
