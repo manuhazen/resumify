@@ -6,6 +6,7 @@ import Experience from './components/Experience';
 import Education from './components/Education';
 import Projects from './components/Projects';
 import Skillset from './components/Skillset';
+import Panel from './components/Panel';
 
 import Notifications from 'react-notify-toast';
 
@@ -20,6 +21,9 @@ class App extends Component {
           <Skillset />
           <Projects />
           <Experience />
+        </div>
+        <div>
+          <Panel />
         </div>
       </div>
     );
