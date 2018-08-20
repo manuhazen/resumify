@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {connect} from 'react-redux';
 
 import Header from './components/Header';
 import Experience from './components/Experience';
@@ -14,16 +15,24 @@ class App extends Component {
       <div className="app resumify">
         <Notifications />
         <div>
-          
           <Header />
-          <Experience />
           <Education />
-          <Projects />
           <Skillset />
+          <Projects />
+          <Experience />
         </div>
       </div>
     );
   }
 }
 
-export default App;
+const mapStateToProps = (state) => ({
+  font: state.panel.font,
+  showSkillset: state.panel.showSkillset,
+  showProjects: state.panel.showProjects,
+  showEducation: state.panel.showEducation,
+  showExperience: state.panel.showExperience,
+  showpanel: state.panel.showpanel
+})
+
+export default connect(mapStateToProps, {})(App);

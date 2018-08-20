@@ -1,13 +1,41 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import {connect} from 'react-redux';
 
 export class Experience extends Component {
   render() {
+
+    const experiences = this.props.experience.map( (exp, index) => {
+        return (
+            <li key={index}>
+                <h3> {exp.position} </h3>
+                <h4>{`${exp.dateFrom} - ${exp.dateTo}`}</h4>
+
+                <em> { exp.company }, {`${exp.city}`}</em>
+                <ul>
+                    <li> {exp.primaryWorkBrief } </li>
+                    { exp.impact1 ? <li>{exp.impact1}</li> : ''}
+                    { exp.impact2 ? <li>{exp.impact2}</li> : ''}
+                    { exp.impact3 ? <li>{exp.impact3}</li> : ''}
+                    { exp.impact4 ? <li>{exp.impact4}</li> : ''}
+                </ul>
+            </li>
+        );
+    });
+    
     return (
-      <div>
-        <h1>Experience</h1>
-      </div>
+        <section>
+            <h2>Experience</h2>
+            <hr />
+            <ul>
+                {experiences}
+            </ul>
+        </section>
     )
   }
 }
 
-export default Experience
+const mapStateToProps = (state) => ({
+    experience: state.resume.experience,
+});
+
+export default connect(mapStateToProps, {})(Experience)
