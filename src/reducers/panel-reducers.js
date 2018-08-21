@@ -6,6 +6,7 @@ import {
     OPEN_RESUME_EDITOR,
     UPDATE_EDITOR_STATUS
 } from '../actions/actionsType';
+import fullResume from '../utils/resumeOrder';
 
 import getItemToToggle from '../utils/getItemToggler';
 
@@ -16,7 +17,7 @@ const initialState = {
     showEmail: true,
     showPhone: true,
     showGithub: true,
-    // resumeOrder: resumeOrder,
+    fullResume: fullResume,
     showSkillset: true,
     showProjects: true,
     showEducation: true,

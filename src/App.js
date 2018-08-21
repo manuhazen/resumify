@@ -10,8 +10,33 @@ import Panel from './components/Panel';
 
 import Notifications from 'react-notify-toast';
 
+import {
+  EDUCATION,
+  SKILLSET,
+  PROJECTS,
+  EXPERIENCE
+} from './utils/resumeOrder';
+
 class App extends Component {
+
+
   render() {
+
+    const fullResume = this.props.fullResume.map( (item, index) => {
+      switch(item) {
+        case EDUCATION:
+          return this.props.showEducation ? <Education key={index} /> : '';
+        case SKILLSET:
+          return this.props.showSkillset ? <Skillset key={index} /> : '';
+        case PROJECTS:
+          return this.props.showProjects ? <Projects key={index} /> : '';
+        case EXPERIENCE:
+          return this.props.showExperience ? <Experience key={index} /> : '';
+        default: 
+          return <h1>Error with the components and Order.</h1>
+      }
+    });
+
     return (
       <div className="app resumify">
         <Notifications />
@@ -20,10 +45,7 @@ class App extends Component {
         </div>
         <div style={{ display: 'inline-block', width:'80%' }}>
           <Header />
-          <Education />
-          <Skillset />
-          <Projects />
-          <Experience />
+          { fullResume }
         </div>
 
       </div>
@@ -33,6 +55,7 @@ class App extends Component {
 
 const mapStateToProps = (state) => ({
   font: state.panel.font,
+  fullResume: state.panel.fullResume,
   showSkillset: state.panel.showSkillset,
   showProjects: state.panel.showProjects,
   showEducation: state.panel.showEducation,
