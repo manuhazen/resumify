@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import PrintButton from './PrintButton';
 import EditorOpener from './EditorOpener';
 import FontSelector from './FontSelector';
+import VisibilityToggler from './VisibilityToggler';
 
 export class SideBar extends Component {
   render() {
@@ -16,6 +17,7 @@ export class SideBar extends Component {
         <PrintButton />
         <EditorOpener />
         <FontSelector />
+        <VisibilityToggler />
       </div>
     )
   }

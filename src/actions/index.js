@@ -25,15 +25,6 @@ export const toggleTools = () => {
     }
 };
 
-export const toggleShowItem = item => {
-    return dispatch => {
-        dispatch({
-            type: TOGGLE_SHOW_ITEM,
-            item
-        });
-    }
-};
-
 export const changeResumeOrder = (order) => {
     return dispatch => {
         dispatch({
@@ -69,3 +60,8 @@ export const changeFonts = (font) => ({
     type: CHANGE_FONT,
     font
 });
+
+export const toggleShowItem = (item) => ({
+    type: TOGGLE_SHOW_ITEM,
+    item
+})

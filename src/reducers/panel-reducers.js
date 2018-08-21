@@ -7,6 +7,8 @@ import {
     UPDATE_EDITOR_STATUS
 } from '../actions/actionsType';
 
+import getItemToToggle from '../utils/getItemToggler';
+
 const initialState = {
     showTools : true,
     font: 'Source Code Pro, monospace',
@@ -26,10 +28,6 @@ const initialState = {
 
 const savedState = JSON.parse(localStorage.getItem('state.panel'));
 
-function openResumifyEditor(state, action) {
-    
-}
-
 export default (state = savedState || initialState, action) => {
     switch (action.type) {
         case OPEN_RESUME_EDITOR: {
@@ -44,6 +42,15 @@ export default (state = savedState || initialState, action) => {
                 ...state,
                 font: action.font
             }
+        }
+
+        case TOGGLE_SHOW_ITEM: {
+            const newState = {
+                ...state,
+                ...getItemToToggle(state, action)
+            };
+            
+            return newState;
         }
 
         default: {
