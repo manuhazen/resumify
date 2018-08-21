@@ -19,15 +19,33 @@ const initialState = {
     showProjects: true,
     showEducation: true,
     showExperience: true,
-    showResumeEditor: true,
+    showResumeEditor: false,
     showLinkedIn: true,
     showWebsite: true,
 }
 
 const savedState = JSON.parse(localStorage.getItem('state.panel'));
 
-export default (state = savedState || initialState, action = {}) => {
+function openResumifyEditor(state, action) {
+    
+}
+
+export default (state = savedState || initialState, action) => {
     switch (action.type) {
+        case OPEN_RESUME_EDITOR: {
+            return {
+                ...state,
+                showResumeEditor: !state.showResumeEditor
+            }
+        }
+
+        case CHANGE_FONT: {
+            return {
+                ...state,
+                font: action.font
+            }
+        }
+
         default: {
             return state;
         }

@@ -15,16 +15,17 @@ class App extends Component {
     return (
       <div className="app resumify">
         <Notifications />
-        <div>
+        <div style={{ display: 'inline-block', width:'19%', height: '100vh', border:'1px solid black' }}>
+          <Panel />
+        </div>
+        <div style={{ display: 'inline-block', width:'80%' }}>
           <Header />
           <Education />
           <Skillset />
           <Projects />
           <Experience />
         </div>
-        <div>
-          <Panel />
-        </div>
+
       </div>
     );
   }

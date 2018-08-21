@@ -43,13 +43,9 @@ export const changeResumeOrder = (order) => {
     }
 };
 
-export const openResumifyEditor = () => {
-    return dispatch => {
-        dispatch({
-            type: OPEN_RESUME_EDITOR
-        });
-    }
-};
+export const openResumifyEditor = () => ({
+    type: OPEN_RESUME_EDITOR
+});
 
 export const updateResume = (resume) => {
     return dispatch => {
@@ -68,3 +64,8 @@ export const updateResumeEditorStatus = (status) => {
         });
     }
 };
+
+export const changeFonts = (font) => ({
+    type: CHANGE_FONT,
+    font
+});

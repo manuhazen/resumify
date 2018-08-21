@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default PrintButton = () => {
+const PrintButton = () => {
     return (
         <div className="resumify-print">
             <label>Print Your CV</label>
@@ -8,3 +8,5 @@ export default PrintButton = () => {
         </div>
     );
 }
+
+export default PrintButton;

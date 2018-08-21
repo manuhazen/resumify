@@ -5,7 +5,7 @@ export class Header extends Component {
 
 
   render() {
-    const {header, showAddress, showEmail, showPhone, showGithub, showLinkedIn, showWebsite} = this.props;
+
     return (
       <header className="resumify-header">
         <h1>{this.props.header.name}</h1>
