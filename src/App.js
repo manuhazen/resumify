@@ -7,6 +7,7 @@ import Education from './components/Education';
 import Projects from './components/Projects';
 import Skillset from './components/Skillset';
 import Panel from './components/Panel';
+import Editor from './components/tools/Editor';
 
 import Notifications from 'react-notify-toast';
 
@@ -47,7 +48,7 @@ class App extends Component {
           <Header />
           { fullResume }
         </div>
-
+        <Editor />
       </div>
     );
   }

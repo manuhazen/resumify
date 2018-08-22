@@ -12,7 +12,7 @@ export class EditorOpener extends Component {
             <div className="resumify-tools-editor">
                 <label>JSON Editor</label>
                 <button onClick={this.props.openResumifyEditor}>
-                    {!this.props.showResumeEditor ? 'Open Editor': 'Close Editor'}
+                    {!this.props.showEditor ? 'Close Editor' : 'Open Editor'}
                 </button>
             </div>
         )
@@ -20,7 +20,7 @@ export class EditorOpener extends Component {
 }
 
 const mapStateToProps = (state) => ({
-    showResumeEditor: state.panel.showResumeEditor
+    showEditor: state.panel.showEditor
 });
 
 const mapDispatchToProps = (dispatch) => bindActionCreators({

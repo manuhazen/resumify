@@ -10,6 +10,8 @@ import fullResume from '../utils/resumeOrder';
 
 import getItemToToggle from '../utils/getItemToggler';
 
+import {WAITING} from '../components/tools/EditorStatus';
+
 const initialState = {
     showTools : true,
     font: 'Source Code Pro, monospace',
@@ -22,9 +24,10 @@ const initialState = {
     showProjects: true,
     showEducation: true,
     showExperience: true,
-    showResumeEditor: false,
+    showEditor: false,
     showLinkedIn: true,
     showWebsite: true,
+    editorStatus: WAITING
 }
 
 const savedState = JSON.parse(localStorage.getItem('state.panel'));
@@ -34,7 +37,7 @@ export default (state = savedState || initialState, action) => {
         case OPEN_RESUME_EDITOR: {
             return {
                 ...state,
-                showResumeEditor: !state.showResumeEditor
+                showEditor: !state.showEditor
             }
         }
 
@@ -45,12 +48,18 @@ export default (state = savedState || initialState, action) => {
             }
         }
 
+        case UPDATE_EDITOR_STATUS: {
+            return {
+                ...state,
+                editorStatus: action.status
+            }
+        }
+
         case TOGGLE_SHOW_ITEM: {
             const newState = {
                 ...state,
                 ...getItemToToggle(state, action)
             };
-            
             return newState;
         }
 

@@ -9,52 +9,32 @@ import {
     UPDATE_EDITOR_STATUS
 } from './actionsType';
 
-export const newResume = () => {
-    return dispatch => {
-        dispatch({
-            type: NEW_RESUME
-        });
-    }
-}
+export const newResume = () => ({
+    type: NEW_RESUME
+});
 
-export const toggleTools = () => {
-    return dispatch => {
-        dispatch({
-            type: TOGGLE_TOOLS
-        });
-    }
-};
+export const toggleTools = () => ({
+    type: TOGGLE_TOOLS
+});
 
-export const changeResumeOrder = (order) => {
-    return dispatch => {
-        dispatch({
-            type: CHANGE_RESUME_ORDER,
-            order: order
-        });
-    }
-};
+export const changeResumeOrder = (order) => ({
+    type: CHANGE_RESUME_ORDER,
+    order: order
+});
 
 export const openResumifyEditor = () => ({
     type: OPEN_RESUME_EDITOR
 });
 
-export const updateResume = (resume) => {
-    return dispatch => {
-        dispatch({
-            type: UPDATE_RESUME,
-            resume
-        });
-    }
-};
+export const updateResume = (resume) => ({
+    type: UPDATE_RESUME,
+    resume
+});
 
-export const updateResumeEditorStatus = (status) => {
-    return dispatch => {
-        dispatch({
-            type: UPDATE_EDITOR_STATUS,
-            status
-        });
-    }
-};
+export const updateEditorStatus = (status) => ({
+    type: UPDATE_EDITOR_STATUS,
+    status
+});
 
 export const changeFonts = (font) => ({
     type: CHANGE_FONT,
