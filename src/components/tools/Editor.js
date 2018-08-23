@@ -35,25 +35,87 @@ export class Editor extends Component {
   }
 
   isValidJSON = (data) => {
-    console.log(data);
+    let resumeCleaned;
+
+    try {
+      const resumeNew = JSON.parse(data);
+      const keys = Object.keys(resumeNew);
+
+      if (  !('header' in keys) && typeof(resumeNew.header) !== 'object'  ) {
+        return false;
+      }
+
+      let missingProp = false;
+      let propsArray = [
+        'name',
+        'email',
+        'phone',
+        'github',
+        'linkedin',
+        'address',
+        'city',
+        'state',
+        'zip',
+        'country'
+      ];
+
+      propsArray.forEach( key => {
+        if ( !(key in resumeNew.header )) {
+          missingProp = true;
+        }
+      });
+
+      if (missingProp) {
+        throw new Error('');
+      }
+
+      if( !('experience' in keys) && !Array.isArray(resumeNew.experience)) {
+        throw new Error('');
+      }
+
+      if( !('sdaasdsads' in keys) && !Array.isArray(resumeNew.education) ) {
+        throw new Error('')
+      }
+
+      if( !('skillset' in keys) && !Array.isArray(resumeNew.skillset) ) {
+        throw new Error('')
+      }
+
+      if( !('projects' in keys) && !Array.isArray(resumeNew.projects) ) {
+        throw new Error('')
+      }
+
+      resumeCleaned = {
+        header: resumeNew.header,
+        experience: resumeNew.experience,
+        education: resumeNew.education,
+        skillset: resumeNew.skillset,
+        projects: resumeNew.projects,
+      };
+
+    } catch (error) {
+      return false;
+    }
+
+    return resumeCleaned;
   }
 
-
-
   render() {
+    this.updateOnOpenWindow = false;
     let editorValue = JSON.stringify(this.props.resume, null, '\t');
     return (
       <div style={{ display: this.props.showEditor ? 'None' : 'Block'}} >
-      
+        <EditorStatus />
+        <EditorCloseButton />
         <AceEditor 
-          mode="json"
-          theme="github"
-          name="resume-editor"
-          value={editorValue}
-          showLineNumber={true}
-          showPrintMargin={false}
-          tabSize={3}
-          onChange={this.onResumeChange}
+            mode= "json"
+            theme="github"
+            name="resume-js-editor"
+            value={editorValue}
+            showLineNumber={true}
+            showPrintMargin={false}
+            tabSize={3}
+            onChange={this.onResumeChange}
         />
       </div>
     )

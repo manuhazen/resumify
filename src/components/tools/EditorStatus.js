@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
+import {bindActionCreators} from 'redux';
 
 import {updateEditorStatus} from '../../actions';
 
@@ -36,7 +37,7 @@ const mapStateToProps = (state) => ({
     statusEditor: state.panel.editorStatus,
 });
 
-const mapDistpatchToProps = (dispatch) => ({
+const mapDistpatchToProps = (dispatch) => bindActionCreators({
     updateEditorStatus
 }, dispatch);
 

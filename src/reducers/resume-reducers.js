@@ -10,6 +10,15 @@ const initialState = {
     ...Resume,
 }
 
+function updateResume(state, action) {
+    const newState = {
+      ...state,
+      ...action.resume
+    };
+    notify.show( "Updated Resume saved to localStorage!", 'success', 4000)
+    return newState;
+  }
+
 
 export default (state=initialState, action = {}) => {
     switch(action.type) {
@@ -18,14 +27,8 @@ export default (state=initialState, action = {}) => {
                 ...initialState
             }
         }
-
         case UPDATE_RESUME: {
-            const newState = { ...action.resume }
-            notify.show('Updated resume saved to localStorage...', 'success', 4000)
-            return {
-                ...state,
-                newState
-            }
+            return updateResume(state, action);
         }
         
         default: {

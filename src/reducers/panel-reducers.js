@@ -32,6 +32,15 @@ const initialState = {
 
 const savedState = JSON.parse(localStorage.getItem('state.panel'));
 
+function changeResumeOrder(state, action) {
+    const newState = {
+        ...state,
+        fullResume: action.order
+    };
+
+    return newState;
+}
+
 export default (state = savedState || initialState, action) => {
     switch (action.type) {
         case OPEN_RESUME_EDITOR: {
@@ -61,6 +70,17 @@ export default (state = savedState || initialState, action) => {
                 ...getItemToToggle(state, action)
             };
             return newState;
+        }
+
+        case TOGGLE_TOOLS: {
+            return {
+                ...state,
+                showTools: !state.showTools
+            }
+        }
+
+        case CHANGE_RESUME_ORDER: {
+            return changeResumeOrder(state, action);
         }
 
         default: {
