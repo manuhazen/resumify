@@ -1,0 +1,21 @@
+.resumify-projects {
+
+    .project-item {
+        margin-bottom: 0.75rem;
+        &__header {
+            justify-content: space-between;
+            a {
+                color: #888;
+                transition: color 300ms ease-out;
+                &:hover {
+                    color: #29B6F6;
+                }
+            }
+        }
+
+        &__brief {
+            display: block;
+            margin: 0.5rem 0;
+        }
+    }
+}

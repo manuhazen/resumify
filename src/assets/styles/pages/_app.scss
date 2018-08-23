@@ -34,4 +34,13 @@
     &.app {
         padding-left: 15rem;
     }
+
+    &-header,
+    &-skillset,
+    &-education,
+    &-projects,
+    &-experience  {
+        margin-bottom: 1rem;
+    }
+
 }

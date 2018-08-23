@@ -24,7 +24,7 @@ export class Experience extends Component {
     
     return (
         <section>
-            <h2>Experience</h2>
+            <h2 className="is-size-3 has-text-grey-darker has-text-weight-semibold">Experience</h2>
             <hr />
             <ul>
                 {experiences}

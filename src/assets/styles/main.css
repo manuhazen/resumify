@@ -24,6 +24,30 @@ body {
     .header-personal_info a:hover {
       color: #29B6F6; }
 
+.resumify-skillset .skillset-item {
+  margin-bottom: 1rem; }
+
+.resumify-skillset .tags-container {
+  padding: 0.5em 0; }
+
+.resumify-education .education-item {
+  margin-bottom: 0.5rem; }
+  .resumify-education .education-item__head {
+    justify-content: space-between; }
+
+.resumify-projects .project-item {
+  margin-bottom: 0.75rem; }
+  .resumify-projects .project-item__header {
+    justify-content: space-between; }
+    .resumify-projects .project-item__header a {
+      color: #888;
+      transition: color 300ms ease-out; }
+      .resumify-projects .project-item__header a:hover {
+        color: #29B6F6; }
+  .resumify-projects .project-item__brief {
+    display: block;
+    margin: 0.5rem 0; }
+
 .resumify-toolpanel {
   position: fixed;
   width: 15rem;
@@ -53,3 +77,6 @@ body {
 
 .resumify.app {
   padding-left: 15rem; }
+
+.resumify-header, .resumify-skillset, .resumify-education, .resumify-projects, .resumify-experience {
+  margin-bottom: 1rem; }

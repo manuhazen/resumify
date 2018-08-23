@@ -8,17 +8,21 @@ export class Projects extends Component {
     
     const projectsList = this.props.projects.map( (project, index) => {
       return (
-        <li key={index}>
-          <h3>
-            { project.link ? <a href={project.link} target='_blank' > {project.name} </a>  : project.name }
-          </h3>
-          <h3>
-            {`${project.dateFrom} - ${project.dateTo}`}
-          </h3>
-          <em>
+        <li key={index} className="project-item">
+          <div className="is-flex project-item__header">
+            <h3 className="is-size-5	">
+              { project.link ? <a href={project.link} target='_blank' > {project.name} </a>  : project.name }
+            </h3>
+            <h5 className="is-size-7 has-text-grey-light is-italic has-text-weight-light	">
+              {`${project.dateFrom} - ${project.dateTo}`}
+            </h5>
+          </div>
+          
+          <em className="project-item__brief">
             {project.teamBrief}
           </em>
-          <ul>
+
+          <ul className="content">
             {
               project.details.map( (detail, detailId) => {
                 return (
@@ -35,9 +39,9 @@ export class Projects extends Component {
   
     return (
       <section className="resumify-projects">
-        <h2>Projects</h2>
+        <h2 className="is-size-3 has-text-grey-darker	has-text-weight-semibold	">Projects</h2>
         <hr/>
-        <ul>
+        <ul className="projects-list">
           { projectsList }
         </ul>
       </section>
