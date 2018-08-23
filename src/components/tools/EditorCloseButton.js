@@ -7,7 +7,6 @@ import {
   toggleTools
 } from '../../actions';
 
-import '../../assets/styles/MenuButton.css';
 
 export class EditorCloseButton extends Component {
 

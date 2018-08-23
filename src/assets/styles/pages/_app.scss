@@ -1,0 +1,37 @@
+.resumify {
+
+    &-toolpanel {
+        position: fixed;
+        width: 15rem;
+        top: 0;
+        left: 0;
+        font-size: 90%;
+        padding: 2.5em;
+        z-index: 100;
+        box-sizing: border-box;
+    }
+
+    &-preview {
+        background: #eee;
+        box-shadow: 0 0 0 99999px #eee;
+        padding: 0.5em 1.5em;
+        min-height: 100vh;
+        -webkit-transform-origin: top left !important;
+        -ms-transform-origin: top left !important;
+        transform-origin: top left !important;
+
+        .page {
+            position: relative;
+            background-color: white;
+            margin: 1em auto;
+            min-height: 279.4mm;
+            width: 215.9mm;
+            box-shadow: 0 1px 5px #ccc;
+            box-sizing: border-box;
+        }
+    }
+
+    &.app {
+        padding-left: 15rem;
+    }
+}

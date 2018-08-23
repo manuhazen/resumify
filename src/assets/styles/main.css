@@ -1,0 +1,55 @@
+body {
+  font-size: 100%;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #444;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility; }
+  body .page {
+    page-break-after: always;
+    padding: 4em; }
+    body .page:last-child, body .page:last-of-type {
+      page-break-after: avoid; }
+    body .page.first-page {
+      padding-top: 4em !important; }
+
+.header-personal_info {
+  margin-right: 1em;
+  margin-bottom: 0.4em;
+  word-break: break-word; }
+  .header-personal_info a {
+    color: #888;
+    transition: color 300ms ease-out; }
+    .header-personal_info a:hover {
+      color: #29B6F6; }
+
+.resumify-toolpanel {
+  position: fixed;
+  width: 15rem;
+  top: 0;
+  left: 0;
+  font-size: 90%;
+  padding: 2.5em;
+  z-index: 100;
+  box-sizing: border-box; }
+
+.resumify-preview {
+  background: #eee;
+  box-shadow: 0 0 0 99999px #eee;
+  padding: 0.5em 1.5em;
+  min-height: 100vh;
+  -webkit-transform-origin: top left !important;
+  -ms-transform-origin: top left !important;
+  transform-origin: top left !important; }
+  .resumify-preview .page {
+    position: relative;
+    background-color: white;
+    margin: 1em auto;
+    min-height: 279.4mm;
+    width: 215.9mm;
+    box-shadow: 0 1px 5px #ccc;
+    box-sizing: border-box; }
+
+.resumify.app {
+  padding-left: 15rem; }

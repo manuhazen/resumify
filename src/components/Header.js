@@ -8,46 +8,44 @@ export class Header extends Component {
 
     return (
       <header className="resumify-header">
-        <h1>{this.props.header.name}</h1>
-        <ul>
+        <h1 className="is-size-1 has-text-weight-bold	">{this.props.header.name}</h1>
+        <ul className="has-text-justified	">
           { this.props.showEmail ? 
-            <li>
+            <h3 className="header-personal_info">
               <a href={`mailto:${this.props.header.email}?subject=Interview%20Request`}> {this.props.header.email} </a>
-            </li> : ''
+            </h3> : ''
           }
           {
             this.props.showPhone ?
-            <li>
+            <h3 className="header-personal_info">
               <a href={`tel:${this.props.header.phone}`}>{this.props.header.phone}</a>
-            </li> : ''
+              <br />
+            </h3>  : ''
           }
           {
             this.props.showGithub ?
-            <li>
+            <h3 className="header-personal_info">
               <a href={this.props.header.github} target='_new'>{this.props.header.github}</a>
-            </li> : ''
+            </h3> : ''
           }
           {
             this.props.showLinkedIn ?
-            <li>
+            <h3 className="header-personal_info">
               <a href={this.props.header.linkedin} target='_new'>{this.props.header.linkedin}</a>
-            </li> : ''
+            </h3> : ''
           }
           {
             this.props.showWebsite ?
-            <li>
+            <h3 className="header-personal_info">
               <a href={this.props.header.website} target='_new'>{this.props.header.website}</a>
-            </li> : ''
+            </h3> : ''
           }
         </ul>
         {
             this.props.showAddress ?
-            <ul>
-              <li>{this.props.header.address}</li>
-              <li>{this.props.header.city}</li>
-              <li>{this.props.header.state}</li>
-              <li>{this.props.header.zip}</li>
-              <li>{this.props.header.country}</li>
+            <ul className="has-text-justified	">
+              <li className="is-italic has-text-weight-light	">{this.props.header.address}, {this.props.header.city}, {this.props.header.state}</li>
+              <li className="is-italic has-text-weight-light	">{this.props.header.country}</li>
             </ul> : ''
           }
       </header>

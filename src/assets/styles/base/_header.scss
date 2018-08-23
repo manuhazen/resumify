@@ -1,0 +1,15 @@
+.header {
+    &-personal_info {
+        margin-right: 1em;
+        margin-bottom: 0.4em;
+        word-break: break-word;
+
+        a {
+            color: #888;
+            transition: color 300ms ease-out;
+            &:hover {
+                color: #29B6F6;
+            }
+        }
+    }
+}

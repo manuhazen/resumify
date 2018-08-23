@@ -1,0 +1,22 @@
+body {
+    font-size: 100%;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #444;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+
+    .page {
+        page-break-after: always;
+        padding: 4em;
+
+        &:last-child, &:last-of-type {
+            page-break-after: avoid;
+        }
+    
+        &.first-page {
+            padding-top: 4em !important;
+        }
+    }
+}

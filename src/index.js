@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
+import { Route, Switch, BrowserRouter as Router } from 'react-router-dom';
 
 import './assets/styles/main.css';
 import {Provider} from 'react-redux';
@@ -23,7 +24,10 @@ class Entry extends Component {
             return <h1> Loading </h1>
         }
         return (
-            <App />
+            <Switch>
+                <Route exact path="/" component={App} />
+            </Switch>
+            
         )
     }
 };
@@ -31,9 +35,11 @@ class Entry extends Component {
 
 
 ReactDOM.render(
-    <Provider store={store}>
-        <Entry />
-    </Provider>, 
+    <Router basename="/">
+        <Provider store={store}>
+            <Entry />
+        </Provider>
+    </Router>, 
     document.getElementById('root')
 );
 

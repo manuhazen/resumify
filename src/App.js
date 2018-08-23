@@ -41,12 +41,14 @@ class App extends Component {
     return (
       <div className="app resumify">
         <Notifications />
-        <div style={{ display: 'inline-block', width:'19%', height: '100vh', border:'1px solid black' }}>
+        <div className="resumify-toolpanel">
           <Panel />
         </div>
-        <div style={{ display: 'inline-block', width:'80%' }}>
-          <Header />
-          { fullResume }
+        <div className="resumify-preview">
+          <div className="page first-page">
+            <Header />
+            { fullResume }
+          </div>
         </div>
         <Editor />
       </div>
