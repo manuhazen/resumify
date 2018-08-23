@@ -63,7 +63,7 @@ export class OrderChanger extends Component {
                     break;
             }
             return (
-                <li key={index} data-id={item}>
+                <li className="box box-order" key={index} data-id={item}>
                     <div>
                         <span className="drag-handle">☰</span>
                         <span className="section-name">{ sectionsOfResume }</span>
@@ -77,7 +77,9 @@ export class OrderChanger extends Component {
         const currentOrder = this.getResumeOrderManipulation();
         return (
             <div className="resumify-tools-orderChanger">
-                <label htmlFor="resume-order-changer">Resume Order</label>
+                <label htmlFor="resume-order-changer">
+                    <span className="is-size-6 has-text-black-bis	has-text-weight-bold">Resume Order</span>
+                </label>
                 <ul id="#resume-order-changer" ref={list => {this.orderList = list;}} >
                     {currentOrder}
                 </ul>

@@ -1,7 +1,13 @@
 @import './base/reset';
 @import './base/header';
+@import './base/print';
+@import './base/menubutton';
+
+@import './layouts/sidebar';
 @import './layouts/skillset';
 @import './layouts/education';
 @import './layouts/projects';
+@import './layouts/editor';
+
 
 @import './pages/app';

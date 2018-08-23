@@ -15,8 +15,9 @@ export class VisibilityToggler extends Component {
   render() {
     return (
       <div className="resumify-visibilityToggler">
-        <h2> Toggler Visibility </h2>
 
+        <h2 className="is-size-6 has-text-black-bis	has-text-weight-bold	"> Header Visibility </h2>
+        
         <div className="check-box-container" >
           <label htmlFor="address-visibility">
             <input id="address-visibility"
@@ -38,7 +39,7 @@ export class VisibilityToggler extends Component {
         </div>
 
         <div className="check-box-container" >
-          <label htmlFor="phone-visibility">
+          <label className="checkbox" htmlFor="phone-visibility">
             <input id="phone-visibility"
               type="checkbox"
               defaultChecked={this.props.showPhone}
@@ -48,7 +49,7 @@ export class VisibilityToggler extends Component {
         </div>
 
         <div className="check-box-container" >
-          <label htmlFor="github-visibility">
+          <label className="checkbox" htmlFor="github-visibility">
             <input id="github-visibility"
               type="checkbox"
               defaultChecked={this.props.showGithub}
@@ -58,7 +59,7 @@ export class VisibilityToggler extends Component {
         </div>
 
         <div className="check-box-container" >
-          <label htmlFor="linkedin-visibility">
+          <label className="checkbox" htmlFor="linkedin-visibility">
             <input id="linkedin-visibility"
               type="checkbox"
               defaultChecked={this.props.showLinkedIn}
@@ -67,8 +68,10 @@ export class VisibilityToggler extends Component {
           </label>
         </div>
 
+        <h2 className="is-size-6 has-text-black-bis	has-text-weight-bold	"> Components Visibility </h2>
+
         <div className="check-box-container" >
-          <label htmlFor="education-visibility">
+          <label className="checkbox" htmlFor="education-visibility">
           <input id="education-visibility"
             type="checkbox"
             defaultChecked={this.props.showEducation}
@@ -78,7 +81,7 @@ export class VisibilityToggler extends Component {
         </div>
 
         <div className="check-box-container" >
-          <label htmlFor="techskills-visibility">
+          <label className="checkbox" htmlFor="techskills-visibility">
           <input id="techskills-visibility"
             type="checkbox"
             defaultChecked={this.props.showSkillset}
@@ -88,7 +91,7 @@ export class VisibilityToggler extends Component {
         </div>
 
         <div className="check-box-container" >
-          <label htmlFor="projects-visibility">
+          <label className="checkbox" htmlFor="projects-visibility">
           <input id="projects-visibility"
             type="checkbox"
             defaultChecked={this.props.showProjects}
@@ -98,7 +101,7 @@ export class VisibilityToggler extends Component {
         </div>
 
         <div className="check-box-container" >
-          <label htmlFor="experience-visibility">
+          <label className="checkbox" htmlFor="experience-visibility">
           <input id="experience-visibility"
             type="checkbox"
             defaultChecked={this.props.showExperience}
@@ -108,7 +111,7 @@ export class VisibilityToggler extends Component {
         </div>
 
         <div className="check-box-container" >
-          <label htmlFor="website-visibility">
+          <label className="checkbox" htmlFor="website-visibility">
           <input id="website-visibility"
             type="checkbox"
             defaultChecked={this.props.showWebsite}

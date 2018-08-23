@@ -104,19 +104,22 @@ export class Editor extends Component {
     this.updateOnOpenWindow = false;
     let editorValue = JSON.stringify(this.props.resume, null, '\t');
     return (
-      <div style={{ display: this.props.showEditor ? 'None' : 'Block'}} >
-        <EditorStatus />
+      <div className={ this.props.showEditor ? 'modal hidden-print' : ' hidden-print modal is-active'} >
+        <div className="modal-background"></div>
+        <div className="modal-content">
+          <EditorStatus />
+          <AceEditor 
+              mode= "json"
+              theme="github"
+              name="resume-js-editor"
+              value={editorValue}
+              showLineNumber={true}
+              showPrintMargin={false}
+              tabSize={3}
+              onChange={this.onResumeChange}
+          />
+        </div>
         <EditorCloseButton />
-        <AceEditor 
-            mode= "json"
-            theme="github"
-            name="resume-js-editor"
-            value={editorValue}
-            showLineNumber={true}
-            showPrintMargin={false}
-            tabSize={3}
-            onChange={this.onResumeChange}
-        />
       </div>
     )
   }

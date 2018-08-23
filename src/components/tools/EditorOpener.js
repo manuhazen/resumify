@@ -10,9 +10,8 @@ export class EditorOpener extends Component {
     render() {
         return (
             <div className="resumify-tools-editor">
-                <label>JSON Editor</label>
-                <button onClick={this.props.openResumifyEditor}>
-                    {!this.props.showEditor ? 'Close Editor' : 'Open Editor'}
+                <button className="is-fullwidth button is-outlined hidden-print" onClick={this.props.openResumifyEditor}>
+                    {!this.props.showEditor ? 'Close Editor 📥' : 'Open Editor 📋'}
                 </button>
             </div>
         )

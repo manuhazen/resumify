@@ -3,8 +3,7 @@ import React from 'react';
 const PrintButton = () => {
     return (
         <div className="resumify-print">
-            <label>Print Your CV</label>
-            <button onClick={ () =>  window.print() }>Print</button>
+            <button className="button is-outlined is-fullwidth" onClick={ () =>  window.print() }>Print 🖨</button>
         </div>
     );
 }

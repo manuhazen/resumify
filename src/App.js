@@ -41,23 +41,23 @@ class App extends Component {
     return (
       <div className="app resumify">
         <Notifications />
-        <div className="resumify-toolpanel">
+        <div className="resumify-toolpanel hidden-print">
           <Panel />
         </div>
-        <div className="resumify-preview">
+        <div className="resumify-preview" style={{ fontFamily: this.props.selectedFont }}>
           <div className="page first-page">
             <Header />
             { fullResume }
           </div>
         </div>
-        <Editor />
+        <Editor className="hidden-print" />
       </div>
     );
   }
 }
 
 const mapStateToProps = (state) => ({
-  font: state.panel.font,
+  selectedFont: state.panel.font,
   fullResume: state.panel.fullResume,
   showSkillset: state.panel.showSkillset,
   showProjects: state.panel.showProjects,

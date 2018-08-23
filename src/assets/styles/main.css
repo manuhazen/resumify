@@ -24,6 +24,99 @@ body {
     .header-personal_info a:hover {
       color: #29B6F6; }
 
+@media print {
+  * {
+    background-color: white !important; }
+  @page {
+    size: auto;
+    margin: 0;
+    background-color: white !important; }
+  .hidden-print, button, #notification-wrapper, .modal {
+    display: none !important; }
+  .resumify-preview {
+    background-color: white !important;
+    box-shadow: none; }
+    .resumify-preview .page {
+      box-shadow: none;
+      margin: 0;
+      background-color: white !important; }
+  .resumify.app {
+    padding: 0 !important;
+    margin: 0 !important;
+    background-color: white !important; }
+  body {
+    background-color: white !important; }
+  body .page {
+    background-color: white !important;
+    padding-top: 0;
+    box-shadow: none !important;
+    margin: 0; }
+    body .page:last-of-type {
+      page-break-after: avoid; }
+  .condensed.resume, .centred.resume {
+    box-shadow: none !important; } }
+
+.resume-tools-menu-button {
+  margin-left: 10px;
+  margin-top: 10px;
+  position: fixed;
+  left: 0;
+  z-index: 10; }
+  .resume-tools-menu-button.close {
+    margin-right: 10px;
+    right: 0;
+    left: auto;
+    top: 0; }
+    .resume-tools-menu-button.close div {
+      background-color: white; }
+
+.menu-open {
+  position: relative;
+  float: right; }
+
+.resume-tools-menu-button div {
+  width: 35px;
+  height: 5px;
+  background-color: black;
+  margin-bottom: 5px;
+  -webkit-transition: .5s;
+  -moz-transition: .5s;
+  transition: .5s all; }
+
+.resume-tools-menu-button div.tools-shown:first-of-type {
+  transform: rotate(45deg);
+  position: relative;
+  width: 35px;
+  top: 10px; }
+
+.resume-tools-menu-button div.tools-shown:nth-of-type(2) {
+  width: 0;
+  position: relative; }
+
+.resume-tools-menu-button div.tools-shown:last-of-type {
+  transform: rotate(-45deg);
+  position: relative;
+  top: -10px;
+  width: 35px; }
+
+.resumify-tools-sidebar .resumify-print {
+  margin: 0.5rem auto; }
+  .resumify-tools-sidebar .resumify-print button {
+    width: 100%; }
+
+.resumify-tools-sidebar .resumify-tools-editor {
+  margin: 0.5rem auto; }
+  .resumify-tools-sidebar .resumify-tools-editor button {
+    width: 100%; }
+
+.resumify-tools-sidebar .resumify-panel-fontSelector {
+  margin: 0.5rem auto; }
+
+.resumify-tools-sidebar .resumify-tools-orderChanger .box-order {
+  padding: 0.75rem;
+  margin-bottom: .5rem;
+  cursor: move; }
+
 .resumify-skillset .skillset-item {
   margin-bottom: 1rem; }
 
@@ -47,6 +140,16 @@ body {
   .resumify-projects .project-item__brief {
     display: block;
     margin: 0.5rem 0; }
+
+#resume-js-editor {
+  height: 80vh !important;
+  width: 90% !important; }
+
+.modal {
+  z-index: 50000; }
+
+.modal-content {
+  width: 93vw; }
 
 .resumify-toolpanel {
   position: fixed;

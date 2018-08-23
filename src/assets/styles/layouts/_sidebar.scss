@@ -1,0 +1,28 @@
+.resumify-tools-sidebar {
+    
+    .resumify-print {
+        margin: 0.5rem auto;
+        button {
+            width: 100%;
+        }
+    }
+
+    .resumify-tools-editor {
+        margin: 0.5rem auto;
+        button {
+            width: 100%;
+        }
+    }
+
+    .resumify-panel-fontSelector {
+        margin: 0.5rem auto;
+    }
+
+    .resumify-tools-orderChanger {
+        .box-order {
+            padding: 0.75rem;
+            margin-bottom: .5rem;
+            cursor: move;
+        }
+    }
+}

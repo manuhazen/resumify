@@ -24,7 +24,7 @@ export class FontSelector extends Component {
         return (
             <div className="resumify-panel-fontSelector">
                 <label htmlFor="fontSelector" style={{ fontFamily: this.props.selectedFont }}>Font</label>
-                <select id="fontSelector"
+                <select className="select" id="fontSelector"
                     onChange={this.handleFontChange}
                     defaultValue={this.props.selectedFont}>
                     {fontsList}

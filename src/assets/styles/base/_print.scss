@@ -1,0 +1,50 @@
+@media print {
+
+    * {
+        background-color: white !important;
+    }
+
+    @page {
+        size: auto;
+        margin: 0;
+        background-color: white !important;
+    }
+    .hidden-print, button, #notification-wrapper, .modal {
+        display: none !important;
+    }
+
+    .resumify-preview {
+        background-color: white !important;
+        box-shadow: none;
+        .page {
+            box-shadow: none;
+            margin: 0;
+            background-color: white !important;
+        }
+    }
+
+    .resumify.app {
+        padding: 0 !important;
+        margin: 0 !important;
+        background-color: white !important;
+    }
+
+    body {
+        background-color: white !important;
+    }
+
+    body .page {
+        background-color: white !important;
+        padding-top: 0;
+        box-shadow: none !important;
+        margin: 0;
+        &:last-of-type {
+            page-break-after: avoid;
+        }
+    }
+
+    .condensed.resume, .centred.resume {
+        box-shadow: none !important;
+    }
+
+}
