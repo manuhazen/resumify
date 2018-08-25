@@ -43,7 +43,7 @@ function changeResumeOrder(state, action) {
     return newState;
 }
 
-export default (state = savedState || initialState, action) => {
+export default (state = savedState || initialState, action = {}) => {
     switch (action.type) {
         case OPEN_RESUME_EDITOR: {
             return {
