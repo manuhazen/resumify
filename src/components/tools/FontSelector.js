@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 
 
-import {changeFonts} from '../../actions/';
+import {changeBodyFonts} from '../../actions/';
 import fonts from '../../utils/fonts';
 
 export class FontSelector extends Component {
@@ -11,7 +11,7 @@ export class FontSelector extends Component {
     handleFontChange = e => {
         const selectedFont = e.target.selectedIndex;
         const selected = fonts[selectedFont].font;
-        this.props.changeFonts(selected);
+        this.props.changeBodyFonts(selected);
     };
 
     render() {
@@ -23,10 +23,10 @@ export class FontSelector extends Component {
         })
         return (
             <div className="resumify-panel-fontSelector">
-                <label htmlFor="fontSelector" style={{ fontFamily: this.props.selectedFont }}>Font</label>
+                <label htmlFor="fontSelector" style={{ fontFamily: this.props.bodyFont }}>Body Font</label>
                 <select className="select" id="fontSelector"
                     onChange={this.handleFontChange}
-                    defaultValue={this.props.selectedFont}>
+                    defaultValue={this.props.bodyFont}>
                     {fontsList}
                 </select>
             </div>
@@ -35,11 +35,11 @@ export class FontSelector extends Component {
 }
 
 const mapStateToProps = (state) => ({
-    selectedFont: state.panel.font,
+    bodyFont: state.panel.bodyFont,
 });
 
 const mapDispatchToProps = (dispatch) => bindActionCreators({
-    changeFonts,
+    changeBodyFonts,
 }, dispatch);
 
 export default connect(mapStateToProps, mapDispatchToProps)(FontSelector)

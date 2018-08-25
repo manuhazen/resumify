@@ -4,7 +4,8 @@ import {
     TOGGLE_SHOW_ITEM,
     CHANGE_RESUME_ORDER,
     OPEN_RESUME_EDITOR,
-    UPDATE_EDITOR_STATUS
+    UPDATE_EDITOR_STATUS,
+    CHANGE_HEADER_FONT
 } from '../actions/actionsType';
 import fullResume from '../utils/resumeOrder';
 
@@ -14,7 +15,8 @@ import {WAITING} from '../components/tools/EditorStatus';
 
 const initialState = {
     showTools : true,
-    font: 'Source Code Pro, monospace',
+    headerFont: 'Open Sans, sans-serif',
+    bodyFont: 'Source Code Pro, monospace',
     showAddress: true,
     showEmail: true,
     showPhone: true,
@@ -53,7 +55,14 @@ export default (state = savedState || initialState, action) => {
         case CHANGE_FONT: {
             return {
                 ...state,
-                font: action.font
+                bodyFont: action.font
+            }
+        }
+
+        case CHANGE_HEADER_FONT: {
+            return {
+                ...state,
+                headerFont: action.font
             }
         }
 

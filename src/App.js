@@ -23,20 +23,6 @@ class App extends Component {
 
   render() {
 
-    const fullResume = this.props.fullResume.map( (item, index) => {
-      switch(item) {
-        case EDUCATION:
-          return this.props.showEducation ? <Education key={index} /> : '';
-        case SKILLSET:
-          return this.props.showSkillset ? <Skillset key={index} /> : '';
-        case PROJECTS:
-          return this.props.showProjects ? <Projects key={index} /> : '';
-        case EXPERIENCE:
-          return this.props.showExperience ? <Experience key={index} /> : '';
-        default: 
-          return <h1>Error with the components and Order.</h1>
-      }
-    });
 
     return (
       <div className="app resumify">
@@ -44,10 +30,16 @@ class App extends Component {
         <div className="resumify-toolpanel hidden-print">
           <Panel />
         </div>
-        <div className="resumify-preview" style={{ fontFamily: this.props.selectedFont }}>
+        <div className="resumify-preview" style={{ fontFamily: this.props.bodyFont }}>
           <div className="page first-page">
             <Header />
-            { fullResume }
+            <Education />
+            <Skillset />
+          </div>
+
+          <div className="page">
+            <Projects />
+            <Experience />
           </div>
         </div>
         <Editor className="hidden-print" />
@@ -57,7 +49,7 @@ class App extends Component {
 }
 
 const mapStateToProps = (state) => ({
-  selectedFont: state.panel.font,
+  bodyFont: state.panel.bodyFont,
   fullResume: state.panel.fullResume,
   showSkillset: state.panel.showSkillset,
   showProjects: state.panel.showProjects,

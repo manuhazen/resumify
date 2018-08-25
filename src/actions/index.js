@@ -6,6 +6,7 @@ import {
     CHANGE_RESUME_ORDER,
     OPEN_RESUME_EDITOR,
     UPDATE_RESUME,
+    CHANGE_HEADER_FONT,
     UPDATE_EDITOR_STATUS
 } from './actionsType';
 
@@ -36,8 +37,13 @@ export const updateEditorStatus = (status) => ({
     status
 });
 
-export const changeFonts = (font) => ({
+export const changeBodyFonts = (font) => ({
     type: CHANGE_FONT,
+    font
+});
+
+export const changeHeaderFonts = (font) => ({
+    type: CHANGE_HEADER_FONT,
     font
 });
 

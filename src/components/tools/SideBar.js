@@ -22,7 +22,6 @@ export class SideBar extends Component {
         <EditorOpener />
         <FontSelector />
         <VisibilityToggler />
-        <OrderChanger />
       </div>
     )
   }
