@@ -22,7 +22,7 @@ export class Skillset extends Component {
 
     return (
       <section className="resumify-skillset">
-        <h2 className="is-size-3 has-text-grey-darker	has-text-weight-semibold	"> Professional Skillset</h2>
+        <h2 style={{ fontFamily: this.props.headerFont }} className="is-size-3 has-text-grey-darker	has-text-weight-semibold	"> Professional Skillset</h2>
         <hr/>
         { skills }
       </section>
@@ -31,7 +31,8 @@ export class Skillset extends Component {
 }
 
 const mapStateToProps = (state) => ({
-  skillset: state.resume.skillset
+  skillset: state.resume.skillset,
+  headerFont: state.panel.headerFont,
 });
 
 

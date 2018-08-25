@@ -24,7 +24,7 @@ export class Experience extends Component {
     
     return (
         <section>
-            <h2 className="is-size-3 has-text-grey-darker has-text-weight-semibold">Experience</h2>
+            <h2 style={{ fontFamily: this.props.headerFont }} className="is-size-3 has-text-grey-darker has-text-weight-semibold">Experience</h2>
             <hr />
             <ul>
                 {experiences}
@@ -36,6 +36,7 @@ export class Experience extends Component {
 
 const mapStateToProps = (state) => ({
     experience: state.resume.experience,
+    headerFont: state.panel.headerFont,
 });
 
 export default connect(mapStateToProps, {})(Experience)

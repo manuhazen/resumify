@@ -8,7 +8,7 @@ export class Header extends Component {
 
     return (
       <header className="resumify-header">
-        <h1 className="is-size-1 has-text-weight-bold	">{this.props.header.name}</h1>
+        <h1 style={{ fontFamily: this.props.headerFont }} className="is-size-1 has-text-weight-bold	">{this.props.header.name}</h1>
         <ul className="has-text-justified	">
           { this.props.showEmail ? 
             <h3 className="header-personal_info">
@@ -56,6 +56,7 @@ export class Header extends Component {
 
 const mapStateToProps = (state) => ({
   header: state.resume.header,
+  headerFont: state.panel.headerFont,
   showAddress: state.panel.showAddress,
   showEmail: state.panel.showEmail,
   showPhone: state.panel.showPhone,

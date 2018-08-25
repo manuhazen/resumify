@@ -39,7 +39,7 @@ export class Projects extends Component {
   
     return (
       <section className="resumify-projects">
-        <h2 className="is-size-3 has-text-grey-darker	has-text-weight-semibold	">Projects</h2>
+        <h2 style={{ fontFamily: this.props.headerFont }} className="is-size-3 has-text-grey-darker	has-text-weight-semibold	">Projects</h2>
         <hr/>
         <ul className="projects-list">
           { projectsList }
@@ -51,6 +51,7 @@ export class Projects extends Component {
 
 const mapStateToProps = (state) => ({
   projects: state.resume.projects,
+  headerFont: state.panel.headerFont,
 })
 
 

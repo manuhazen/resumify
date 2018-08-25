@@ -19,7 +19,7 @@ export class Education extends Component {
 
     return (
       <div className="resumify-education">
-        <h2 className="is-size-3 has-text-grey-darker	has-text-weight-semibold	">Education</h2>
+        <h2 style={{ fontFamily: this.props.headerFont }} className="is-size-3 has-text-grey-darker	has-text-weight-semibold	">Education</h2>
         <hr/>
         <ul>
           { educations }
@@ -30,7 +30,8 @@ export class Education extends Component {
 }
 
 const mapStateToProps = (state) => ({
-  education: state.resume.education
+  education: state.resume.education,
+  headerFont: state.panel.headerFont,
 });
 
 export default connect(mapStateToProps)(Education)
