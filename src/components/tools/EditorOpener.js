@@ -11,7 +11,7 @@ export class EditorOpener extends Component {
         return (
             <div className="resumify-tools-editor">
                 <button className="is-fullwidth button is-outlined hidden-print" onClick={this.props.openResumifyEditor}>
-                    {!this.props.showEditor ? 'Close Editor 📥' : 'Open Editor 📋'}
+                    {!this.props.showEditor ? 'Open Editor 📋' : 'Close Editor 📥'}
                 </button>
             </div>
         )

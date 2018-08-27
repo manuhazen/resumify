@@ -104,7 +104,7 @@ export class Editor extends Component {
     this.updateOnOpenWindow = false;
     let editorValue = JSON.stringify(this.props.resume, null, '\t');
     return (
-      <div className={ this.props.showEditor ? 'modal hidden-print' : ' hidden-print modal is-active'} >
+      <div className={ this.props.showEditor ? 'modal hidden-print is-active' : ' hidden-print modal '} >
         <div className="modal-background"></div>
         <div className="modal-content">
           <EditorStatus />

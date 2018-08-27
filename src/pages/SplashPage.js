@@ -17,7 +17,7 @@ const SplashPage = ({}) => {
 
                 <p className="splash-page__intro">Create a Virtual PDF Resume with Resumify.</p>
 
-                <Link to="/app" className="button is-medium is-primary">Go to the App</Link>
+                <Link to="/app" className="splash-page__cta button is-medium is-primary">Go to the App</Link>
                 <br />
 
                 <small className="splash-page__attribution">

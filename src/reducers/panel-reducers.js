@@ -14,7 +14,7 @@ import getItemToToggle from '../utils/getItemToggler';
 import {WAITING} from '../components/tools/EditorStatus';
 
 const initialState = {
-    showTools : true,
+    showTools : false,
     headerFont: 'Open Sans, sans-serif',
     bodyFont: 'Source Code Pro, monospace',
     showAddress: true,

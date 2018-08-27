@@ -18,7 +18,7 @@ export class EditorCloseButton extends Component {
 
   render() {
     return (
-      <div className={this.props.showEditor ? 'menu-open resume-tools-menu-button hidden-print close': 'resume-tools-menu-button close hidden-print'}
+      <div className={this.props.showEditor ? 'resume-tools-menu-button close hidden-print' : 'menu-open resume-tools-menu-button hidden-print close' }
         onClick={this.onCloseButtonClick}>
           <div className={this.props.showResumeEditor ? 'tools-shown' : ''}></div>
           <div className={this.props.showResumeEditor ? 'tools-shown' : ''}></div>

@@ -228,4 +228,6 @@ body {
     width: 50%;
     margin: 0 auto; }
   .splash-page__intro {
+    margin-bottom: 1.25em; }
+  .splash-page__cta {
     margin-bottom: 1em; }
