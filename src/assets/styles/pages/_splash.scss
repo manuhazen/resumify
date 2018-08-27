@@ -1,0 +1,41 @@
+@import '../mixins';
+
+.splash-page {
+    height: 100vh;
+    @include flexbox();
+    @include align-items(center);
+    @include justify-content(center);
+
+    &__content {
+        width: 20em;
+        max-width: 100%;
+        font-family: 'Open Sans', sans-serif;
+        text-align: center;
+
+        h1 {
+            position: relative;
+            margin-bottom: 1.2em;
+            &:before {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                border-bottom: thin solid;
+                width: 1em;
+                left: 50%;
+                margin-left: -0.5em;
+                border-color: black;
+                border-bottom-width: 2px;
+            }
+        }
+    }
+
+    &__image {
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    &__intro {
+        margin-bottom: 1em;
+    }
+}

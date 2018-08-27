@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 492 492" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;">
+    <circle cx="245.76" cy="245.76" r="245.76" style="fill:rgb(51,77,92);"/>
+    <path d="M140.442,104.981L140.442,386.581L245.404,491.511C245.523,491.512 245.641,491.52 245.76,491.52C366.068,491.52 466.117,405.048 487.314,290.881L301.414,104.981L140.442,104.981Z" style="fill-opacity:0.1;fill-rule:nonzero;"/>
+    <rect x="140.462" y="376.678" width="210.586" height="9.882" style="fill:rgb(213,214,219);"/>
+    <path d="M301.407,104.96L140.462,104.96L140.462,376.679L351.058,376.679L351.058,154.785L301.407,104.96Z" style="fill:rgb(235,240,243);fill-rule:nonzero;"/>
+    <path d="M301.407,154.785L351.058,154.785L301.407,104.96L301.407,154.785Z" style="fill:rgb(225,230,233);fill-rule:nonzero;"/>
+    <g>
+        <rect x="157.67" y="316.303" width="176.184" height="9.554" style="fill:rgb(213,214,219);"/>
+        <g transform="matrix(1,0,0,1,0,-113)">
+            <rect x="157.67" y="316.303" width="176.184" height="9.554" style="fill:rgb(213,214,219);"/>
+        </g>
+        <rect x="157.67" y="344.115" width="80.205" height="9.554" style="fill:rgb(213,214,219);"/>
+        <g transform="matrix(1,0,0,1,0,-120)">
+            <rect x="157.67" y="344.115" width="80.205" height="9.554" style="fill:rgb(213,214,219);"/>
+        </g>
+        <path d="M301.407,154.785L351.058,196.408L351.058,154.785L301.407,154.785Z" style="fill:rgb(213,214,219);fill-rule:nonzero;"/>
+        <g transform="matrix(1.24492,0,0,1.24492,-50.8648,32.054)">
+            <text x="164.047px" y="215.001px" style="font-family:'Roboto-Light', 'Roboto';font-weight:300;font-size:64px;fill:rgb(213,214,219);">R</text>
+        </g>
+        <g transform="matrix(1,0,0,1,-47,34)">
+            <text x="255.392px" y="265.955px" style="font-family:'Roboto-Light', 'Roboto';font-weight:300;font-size:72px;fill:rgb(213,214,219);">r</text>
+        </g>
+    </g>
+    <rect x="157.67" y="116.731" width="57.718" height="67.999" style="fill:rgb(39,162,219);"/>
+    <g>
+        <circle cx="186.527" cy="139.008" r="12.257" style="fill:rgb(45,147,186);"/>
+        <path d="M186.528,155.87C170.589,155.87 157.668,168.79 157.668,184.729L215.386,184.729C215.387,168.791 202.466,155.87 186.528,155.87Z" style="fill:rgb(45,147,186);fill-rule:nonzero;"/>
+    </g>
+</svg>

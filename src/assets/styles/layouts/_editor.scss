@@ -1,6 +1,6 @@
 #resume-js-editor {
     height: 80vh!important;
-    width: 90%!important;
+    width: 100%!important;
 }
 
 .modal {
@@ -9,4 +9,11 @@
 
 .modal-content {
     width: 93vw;
+
+    .editor__status {
+        padding: 0.5em 0;
+        background-color: white;
+        display: block;
+        text-align: center;
+    }
 }

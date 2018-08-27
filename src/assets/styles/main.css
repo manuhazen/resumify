@@ -143,13 +143,18 @@ body {
 
 #resume-js-editor {
   height: 80vh !important;
-  width: 90% !important; }
+  width: 100% !important; }
 
 .modal {
   z-index: 50000; }
 
 .modal-content {
   width: 93vw; }
+  .modal-content .editor__status {
+    padding: 0.5em 0;
+    background-color: white;
+    display: block;
+    text-align: center; }
 
 .resumify-toolpanel {
   position: fixed;
@@ -183,3 +188,44 @@ body {
 
 .resumify-header, .resumify-skillset, .resumify-education, .resumify-projects, .resumify-experience {
   margin-bottom: 1rem; }
+
+.splash-page {
+  height: 100vh;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center; }
+  .splash-page__content {
+    width: 20em;
+    max-width: 100%;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center; }
+    .splash-page__content h1 {
+      position: relative;
+      margin-bottom: 1.2em; }
+      .splash-page__content h1:before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        border-bottom: thin solid;
+        width: 1em;
+        left: 50%;
+        margin-left: -0.5em;
+        border-color: black;
+        border-bottom-width: 2px; }
+  .splash-page__image {
+    width: 50%;
+    margin: 0 auto; }
+  .splash-page__intro {
+    margin-bottom: 1em; }

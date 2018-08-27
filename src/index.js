@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
+import SplashPage from './pages/SplashPage';
 import { Route, Switch, BrowserRouter as Router } from 'react-router-dom';
 
 import './assets/styles/main.css';
@@ -25,7 +26,8 @@ class Entry extends Component {
         }
         return (
             <Switch>
-                <Route exact path="/" component={App} />
+                <Route exact path="/" component={SplashPage} />
+                <Route exact path="/app" component={App} />
             </Switch>
             
         )

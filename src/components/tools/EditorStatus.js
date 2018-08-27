@@ -25,7 +25,7 @@ export class EditorStatus extends Component {
     }
     render() {
         return (
-            <em style={{
+            <em className="editor__status" style={{
                 color: this.props.statusEditor === UPDATED ? 'green' :
                 this.props.statusEditor === ERROR ? 'red' : 'black'
              }}> {this.props.statusEditor }</em>
